@@ -1,0 +1,12 @@
+{
+  "name": "nicojrey-racing",
+  "version": "1.0.0",
+  "description": "A polished browser racing game for NicoJrey websites.",
+  "private": true,
+  "scripts": {
+    "start": "python3 -m http.server 5173",
+    "build": "rm -rf dist && mkdir -p dist/src && cp index.html dist/ && cp src/main.js src/styles.css dist/src/",
+    "preview": "python3 -m http.server 4173 -d dist",
+    "package": "npm run build && rm -f nicojrey-racing.zip && cd dist && zip -qr ../nicojrey-racing.zip ."
+  }
+}
